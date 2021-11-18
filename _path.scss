@@ -1,0 +1,31 @@
+#path{
+    margin-top:250px;
+    .path{
+        @include margin-padding(0,0 ,100px ,0);
+        // @include flex(flex, space-between, null);
+        .right-side{
+            // display: flex;
+            // flex-basis: 50%;
+            // max-width: 50%;
+        }
+        .left-side{
+            display: flex;
+            flex-basis: 45%;
+            max-width: 45%;
+            .path-title{
+                @include flex(flex, center, center);
+                flex-direction: column;
+                h2{
+                    font-size: $font-size + 10px;
+                    margin-bottom: 34px;
+                    color: #46484d;
+                }
+                p{
+                    font-size: $font-size + 2px;
+                    line-height: 42px;
+                    color: #868383;
+                }
+            }
+        }
+    }
+}

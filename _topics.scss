@@ -1,0 +1,99 @@
+#topics{
+    
+    margin-top:250px;
+    &::before,
+    &::after {
+        position: absolute;
+        background: rgba(140, 124, 229, 0.08);
+        // border-top-right-radius: 20px;
+        // border-bottom-right-radius: 50px;
+        @include border-radius(0, 20px, 50px, 0);
+        width: 200px;
+        content: "";
+        bottom: 90px;
+        left: -225px;
+        transform: skewX(10deg);
+        height: 250px;
+    }
+      &::after {
+        bottom: 149px;
+        left: -300px;
+    }
+    .topic-title {
+        font-size: 26px;
+        margin-bottom: 30px;
+        border-right: 5px solid red;
+        padding-right: 20px;
+    }
+    .topic{
+        @include flex(flex, space-between, null);
+        margin-bottom: 20px;
+        .card{
+            display: flex;
+            flex-basis: 49%;
+            max-width: 49%;
+            border: 1px solid #efefef;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            &:hover .topic-img::before {
+                opacity: 0.6;
+            }
+            .topic-img {
+                display: flex;
+                flex-basis: 30%;
+                max-width: 30%;
+                overflow: hidden;
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: #000;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    transition: opacity 0.5s ease;
+                }
+            }
+            .topic-detail {
+                display: flex;
+                flex-basis: 70%;
+                max-width: 70%;
+                flex-direction: column;
+                padding: 22px;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 37px;
+                    height: 105%;
+                    background-color: #fff;
+                    position: absolute;
+                    top: -5px;
+                    right: -27px;
+                    -webkit-transform: rotate(5deg);
+                    transform: rotate(5deg);
+                }
+                a {
+                    font-size: 18px;
+                }
+                .meta {
+                    font-size: 12px;
+                    margin-top: 15px;
+                    color: #ccc;
+                    span {
+                        margin-left: 16px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    margin-top: 20px;
+                    line-height: 30px;
+                    color: #757575;
+                }
+            }
+        }    
+    }
+}

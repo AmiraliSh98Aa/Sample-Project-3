@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Vazir-Bold;
+    src: url(#{$font-root}/Vazir-Bold.eot) format("eot"),
+      url(#{$font-root}/Vazir-Bold.woff) format("woff"),
+      url(#{$font-root}/Vazir-Bold.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  * {
+      font-family: Vazir-Bold;
+      direction: rtl;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body {
+      overflow-x: hidden;
+      // background-color: $bg-color;
+  }
+  li,
+  ol,
+  ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  a {
+      text-decoration: none;
+  }
+  .container {
+      max-width: 1170px;
+      margin: auto;
+      //   display: flex;
+      position: relative;
+  }
+  .row{
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      @include flex(flex,center,null);
+  }
+  .img-fluid{
+      display: block;
+      width: 100%;
+      height: auto;
+  }
+  [class^="col-"] {
+    float: right;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media only screen and (max-width:$sm-width){
+    $sm-class-slug: col-sm;
+    @for $i from 1 through 12 {
+        .#{$sm-class-slug}-#{$i}{
+            width: 8.3333% * $i;
+        };
+    };
+};
+@media only screen and (min-width:$md-width){
+    // $md-class-slug: col-md;
+    @for $i from 1 through 12 {
+        .#{col-md}-#{$i}{
+            width: 8.3333% * $i;
+        };
+    };
+};
+@media only screen and (max-width:$lg-width){
+    $lg-class-slug: col-lg;
+    @for $i from 1 through 12 {
+        .#{$lg-class-slug}-#{$i}{
+            width: 8.3333% * $i;
+        };
+    };
+};
+
+@media only screen and (max-width:$xl-width){
+    $xl-class-slug: col-xl;
+    @for $i from 1 through 12 {
+        .#{$xl-class-slug}-#{$i}{
+            width: 8.3333% * $i;
+        };
+    };
+};

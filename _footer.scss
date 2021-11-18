@@ -1,0 +1,93 @@
+footer {
+    margin-top: 250px;
+    background-color: #35373a;
+    padding-top: 80px;
+    #footer{
+        .side-1{
+            display: flex;
+            flex-basis: 30%;
+            max-width: 30%;
+            @include flex(flex, center, flex-start);
+            flex-direction: column;
+            h5{
+            color: #fff;
+            margin-bottom: 32px;
+            }
+            ul{
+                font-size: $font-size - 1px;
+                margin-bottom: 40px;
+                li{
+                    margin-bottom: 18px;
+                    color: #a5a3a3;
+                    i{
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+        .side-2{
+            @include flex(flex, center, center)
+            flex-basis: 30%;
+            max-width: 30%;
+            ul{
+                font-size: $font-size - 1px;
+                margin-bottom: 40px;
+                li{
+                    margin-bottom: 16px;
+                    a{
+                        color: #a5a3a3;
+                        transition: all .6s ease;
+                        &:hover{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+        }
+        .side-3{
+            @include flex(flex, center, flex-start);
+            flex-direction: column;
+            flex-basis: 30%;
+            max-width: 30%;
+            p{
+                color: yellow;
+                margin-bottom: 30px;
+                font-size: $font-size;
+                width: 100%;
+                text-align: center;
+            }
+            form{
+                position: relative;
+                .email{
+                    width: 210%;
+                    height: 35px;
+                    padding: 10px;
+                    border: 0;
+                    border-radius: 4px;
+                    outline: 0;
+                }
+                .submit{
+                    position: absolute;
+                    top: 8px;
+                    left: -170px;
+                    border: 0;
+                    background-color: transparent;
+                    cursor: pointer;
+                    outline: 0;
+                    transition: all .6s ease;
+                    &:hover{
+                        transform: scale(1.5);
+                        color: rgb(34, 94, 206);
+                    }
+                }
+            }
+        }
+    }
+    .copy-right{
+        background-color: #2b2d30;
+        text-align: center;
+        padding: 30px 0;
+        color: #cacaca;
+        font-size: $font-size - 2px;
+    }
+}

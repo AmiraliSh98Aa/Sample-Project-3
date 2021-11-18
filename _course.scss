@@ -1,0 +1,97 @@
+#course{
+    .pipe{
+        position: absolute;
+        width: 1726px;
+        background: rgba(140, 124, 229, 0.08);
+        //height: 407px;
+        // top: -45px;
+        left: -366px;
+        height: 370px;
+        top: 83px;
+        z-index: -2;
+        border-radius: 0 250px 250px 0;
+    }
+    .row{
+        width: 100%;
+        .course{
+            // display: flex;
+            // flex-direction: column;
+            // flex-basis: 30%;
+            // max-width: 30%;
+            // @include section-measure(flex,30%,30%)
+            background-color: #fff;
+            position: relative;
+            border-bottom:4px solid red ;
+            @include border-radius(0, 0, 5px, 5px);
+            cursor: pointer;
+            @include margin-padding(0, 16px, 0, 16px);
+            transition: box-shadow 1s ease;
+            &:hover{
+                box-shadow: 0 0 13px 0px rgba(95, 95, 95, 0.75);
+            }
+            &:hover .teacher {
+                top: -54px;
+            }
+            &:hover .teacher-name {
+                width: 200px;
+                right: 70px;
+            }
+            .status{
+                position: absolute;
+                font-size: $font-size - 4px;
+                left: 10px;
+                top: 10px;
+                background: rgba(46, 125, 222, 50%);
+                color: #fff;
+                @include margin-padding(2px,6px,2px,6px,false);
+                @include border-radius(2px,2px,2px,2px);
+            }
+            .teacher{
+                position: absolute;
+                top: -34px;
+                right: 9px;
+                width: 54px;
+                z-index: -1;
+                // @include border-radius(-left, -right, -right, -left)
+                transition: all 1s ease;
+            }
+            .teacher-name{
+                position: absolute;
+                z-index: -2;
+                top: -30px;
+                right: 9px;
+                font-size: $font-size - 3px;
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: all 0.5s ease;
+            }
+            a{
+                @include margin-padding(10px,10px,10px,10px);
+                font-size: $font-size + 2px;
+                color: $font-color;
+
+            }
+            .meta{
+                display: flex;
+                font-size: $font-size - 2px;
+                @include margin-padding(0,10px,0,10px);
+                @include margin-padding(16px,0,12px,0,false);
+                border-top: 2px solid #d6d3d3;
+                span:nth-child(1){
+                    margin-left: auto;
+                    i{
+                        color: #45a1ff;
+                        margin-left: 3px;
+                    }
+                }
+                span:nth-child(2){
+                    @include margin-padding(0, 8px, 0, 8px, false);
+                    border-radius: 5px;
+                    color: #37b537;
+                    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}

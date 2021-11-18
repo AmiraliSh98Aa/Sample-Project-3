@@ -1,0 +1,57 @@
+#nav{
+    .navbar{
+        background-color: rgb(241, 231, 231);
+        @include margin-padding(0, 7px, 0, 7px, false);
+        font-size: $font-size;
+        height: 60px;
+        @include margin-padding(24px, 0, 24px, 0)
+        @include flex(flex,space-between,null);
+        ul{
+            li{
+                @include display-flex-inlineblcok(null, inline-block)
+                line-height: 60px;
+                // margin-left: 18px;
+                @include margin-padding(0, 0, 0, 18px);
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #000;
+                    transition: width 0.5s ease;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                a{
+                    color: $font-color;
+                    transition: color .5s ease;
+                    &:hover{
+                        color: chocolate;
+                    }
+                }
+            }
+        }
+        .social-icon{
+            direction: ltr;
+            @include margin-padding(21px, 0, 0, 0, false);
+            a{
+                color: #795454;
+                transition: color .5s ease;
+                &:hover{
+                    color: #221e1e;
+                }
+                i{
+                    @include margin-padding(0, 10px, 0, 0);
+                    transition: all .5s ease;
+                    &:hover{
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+    }
+}
